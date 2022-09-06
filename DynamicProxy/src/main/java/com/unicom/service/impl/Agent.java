@@ -11,5 +11,6 @@ public class Agent implements Service {
         SuperLiu liu = new SuperLiu();
         liu.sing();
         System.out.println("费用结算");
+        System.out.println("欢迎下次继续合作！");
     }
 }
