@@ -14,5 +14,6 @@ public class Agent implements Service {
         System.out.println("欢迎下次继续合作！");
         System.out.println("有意向我们随时联系。"); // at hot-fix
         System.out.println("master test");
+        System.out.println("hot-fix test");
     }
 }
