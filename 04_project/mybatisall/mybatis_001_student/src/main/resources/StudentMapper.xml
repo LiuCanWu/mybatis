@@ -62,7 +62,10 @@
       int update(Student stu);
     -->
     <update id="update" parameterType="student">
-        update student set name=#{name},email=#{email},age=#{age}
+        update student set
+           name=#{name},
+           email=#{email},
+           age=#{age}
         where id=#{id}
     </update>
 </mapper>

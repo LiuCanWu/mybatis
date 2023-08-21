@@ -62,7 +62,7 @@ public class MyTest {
     public void testInsert()throws IOException{
 
         //4.调用方法
-        int num = sqlSession.insert("zar.insert",new Student("haha666","haha@126.com",23));
+        int num = sqlSession.insert("zar.insert",new Student("haha0821","haha@126.com",23));
         //切记切记切记:在所有的增删改后必须手工提交事务!!!
         sqlSession.commit();
 
@@ -81,9 +81,9 @@ public class MyTest {
 
     @Test
     public void testUpdate()throws IOException {
-
+        Student studentNew = new Student(10, "hehe-new", "hehe@126.com", 111);
         //4.调用方法
-        int num = sqlSession.update("zar.update",new Student(3,"hehe","hehe@126.com",30));
+        int num = sqlSession.update("zar.update",studentNew);
         System.out.println(num);
         sqlSession.commit();
 
