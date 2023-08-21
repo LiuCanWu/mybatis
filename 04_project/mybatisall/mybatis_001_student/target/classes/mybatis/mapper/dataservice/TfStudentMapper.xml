@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unicom.dataservice.mapper.TfStudentMapper">
+    <resultMap id="TfStudentMap" type="com.unicom.dataservice.domain.TfStudent">
+        <result property="id"    column="id"   />
+        <result property="name"    column="name"   />
+        <result property="email"    column="email"   />
+        <result property="age"    column="age"   />
+
+    </resultMap>
+
+
+    <insert id="insertStudentInfo">
+        insert into STUDENT (id, name, email, age)
+        values (#{id},#{name},#{email},#{age})
+    </insert>
+    <select id="selectNameById" resultType="java.lang.String">
+        select name from STUDENT
+        where id = #{id}
+    </select>
+</mapper>
